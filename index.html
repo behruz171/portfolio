@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    .scrol{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        box-shadow: 0 0 10px #ff2d75,
+        0 0 25px #03bcf4,
+        0 0 40px #ff2d75,
+        0 0 70px #03bcf4,
+        0 0 100px #ff2d75;
+        background:radial-gradient(#03bcf4,#ff2d75);
+        z-index: 2;
+    }
+</style>
 <body>
+    <div class="scrol"></div>
     <div class="container1">
         <div class="bubbles"></div>
 

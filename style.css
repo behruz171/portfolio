@@ -289,3 +289,16 @@ h2{
         0 0 100px #ff2d75,
         0 0 125px #ff2d75;
 }
+
+/* scrollbar style */
+::-webkit-scrollbar{
+    position: relative;
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#03bcf4,#ff2d75);
+    border-radius: 6px;
+}
+::-webkit-scrollbar:hover{
+    width: 9px;
+}

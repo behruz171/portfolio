@@ -13,7 +13,9 @@ body{
     background: #0c192c;
 }
 
-.container{ 
+.container{
+    transition: all 3s;
+    opacity: 0; 
     position: relative;
     display: flex;
     justify-content: center;
@@ -142,7 +144,7 @@ ul li:hover a span{
 .container1{
     position: relative;
     width: 100%;
-    height: 180vh;
+    height: 210vh;
     overflow: hidden;
 }
 
@@ -190,6 +192,8 @@ ul li:hover a span{
     /* align-items: center; */
     /* min-height: 100vh; */
     margin-top: 50px;
+    transition: all 3.5s;
+    opacity: 0;
 }
 
 h2{
@@ -301,4 +305,8 @@ h2{
 }
 ::-webkit-scrollbar:hover{
     width: 9px;
+}
+
+.show{
+    opacity: 3;
 }

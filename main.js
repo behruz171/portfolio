@@ -1,5 +1,5 @@
 // it's speking input ----------------------------
-let p2_text = document.querySelector("h2")
+let p2_text = document.querySelector(".speak_h2")
 let timeoutId;
 const debounce = (calback) =>{
     clearTimeout(timeoutId)

@@ -2,6 +2,7 @@
     font-family:'Oswald',sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
@@ -22,12 +23,12 @@ body{
     align-items: center;
     min-height: 80vh;
 }
-ul{
+.container ul{
     position: absolute;
     transform: skewY(-25deg);
 }
 
-ul li{
+.container ul li{
     position: absolute;
     top: 0;
     transform: translate(calc(var(--i)*40px),calc(var(--i)*40px));
@@ -39,12 +40,12 @@ ul li{
     transition: 0.5s;
 }
 
-ul li:hover{
+.container ul li:hover{
     top: -60px;
     background: var(--clr);
 }
 
-ul li:before{
+.container ul li:before{
     content: '';
     position: absolute;
     top: 0;
@@ -57,12 +58,12 @@ ul li:before{
     transition: 0.5s;
 }
 
-ul li:hover::before{
+.container ul li:hover::before{
     background: var(--clr);
     filter: brightness(0.8);
 }
 
-ul li::after{
+.container ul li::after{
     content: attr(data-text);
     position: absolute;
     top: -40px;
@@ -83,7 +84,7 @@ ul li::after{
     color: var(--clr);
 }
 
-ul li:hover:after{
+.container ul li:hover:after{
     filter: brightness(0.9);
     background:var(--clr);
     color: #fff;
@@ -91,7 +92,7 @@ ul li:hover:after{
 
 }
 
-ul li a{
+.container ul li a{
     text-decoration: none;
     color: transparent;
     display: block;
@@ -101,10 +102,10 @@ ul li a{
 
 }
 
-ul li:hover a{
+.container ul li:hover a{
     color: #fff;
 }
-ul li a span{
+.container ul li a span{
     position: absolute;
     top: 0;
     left: -40px;
@@ -121,7 +122,7 @@ ul li a span{
     font-size: 1.25em;
 }
 
-ul li:hover a span{
+.container ul li:hover a span{
     color: #fff;
 }
 
@@ -145,7 +146,7 @@ ul li:hover a span{
 .container1{
     position: relative;
     width: 100%;
-    height: 300vh;
+    height: 350vh;
     overflow: hidden;
 }
 
@@ -332,7 +333,7 @@ ul li:hover a span{
 }
 
 ::-webkit-scrollbar-track{
-    background: black;
+    /* background: linear-gradient(#03bcf4,#ff2d75); */
 }
 
 /* Card animation */
@@ -471,4 +472,124 @@ ul li:hover a span{
 
 .box:hover .elements.content p{
     opacity: 1;
+}
+
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+.navigation{
+    position: fixed;
+    width: 400px;
+    height: 70px;
+    background: #03bcf4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 100;
+}
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: #0c192c;
+}
+.navigation ul li.active a .icon{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    color: #0c192c;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #ff2d75;
+    border-radius: 50%;
+    border: 6px solid #0c192c;
+    transition: 0.5s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #0c192c;
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 #0c192c;
+}
+
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My portfolio</title>
+    <link rel="shortcut icon" href="https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -27,6 +28,44 @@
 <body>
     <div class="scrol"></div>
     <div class="container1">
+        <div class="navbar">
+            <div class="navigation">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#masaage">
+                            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                            <span class="text">Masaage</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#container2">
+                            <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                            <span class="text">Photos</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="text">Settings</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </div>
+
         <div class="bubbles"></div>
         <div class="box2">
             <div>
@@ -72,7 +111,7 @@
             </div>
         </div>
 
-        <div class="container2">
+        <div id="container2" class="container2">
             <div class="wrapper">
                 <span style="--v:1;"><img class="img2" src="https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png" alt=""></span>
                 <span style="--v:2;"><img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt=""></span>
@@ -91,7 +130,7 @@
             <img src="./img/My project.png" alt="">
         </div>
         <div class="container">
-            <ul>
+            <ul id="masaage">
                 <li style="--i:-3;--clr:#1877f2;" data-text="Facebook"><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span>Facebook</a></li>
                 <li style="--i:-2;--clr:#25d366;" data-text="whatsapp"><a href="#"><span><i class="fa-brands fa-whatsapp"></i></span>whatsapp</a></li>
                 <li style="--i:-1;--clr:#1da1f2;" data-text="Twitter"><a href="https://twitter.com/Behr_u_z"><span><i class="fa-brands fa-twitter"></i></span>Twitter</a></li>
@@ -101,6 +140,9 @@
             </ul>
         </div>
     </div>
+
+
+
     <script src="./main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
@@ -109,5 +151,7 @@
 		speed: 400,
 	});
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

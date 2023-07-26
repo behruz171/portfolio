@@ -57,14 +57,15 @@ let wrap = document.querySelector('.wrapper')
 
 wrap.onclick = ()=>{
     let bub = document.querySelector('.bubbles')
-    bub.classList.toggle('var')
+    // bub.classList.toggle('var')
+    bub.style.filter = 'blur(20px)'
     nimadir()
 }
 
 function nimadir(){
     let bub = document.querySelector('.bubbles')
     debounce(()=>{
-        bub.classList = 'bubbles'
+        bub.style.filter = 'blur(0)'
     })
 }
 
@@ -92,3 +93,50 @@ function activeLink(){
 }
 list.forEach((item)=>
 item.addEventListener('click',activeLink));
+
+// ----------------------------------------------
+let a = true
+const body = document.querySelector("body")
+const card = document.querySelectorAll('.box .card')
+const indicator = document.querySelector('.indicator')
+const nima = document.querySelector('.container3 a span')
+
+function bos(){
+    if(a == true){
+        nima.textContent = 'white'
+        nima.style.color = '#0e1538'
+        nima.style.background = '#fff'
+        indicator.className = 'indicator1'
+        body.style.background = '#fff'
+        card.forEach(item =>
+            item.style.background = 'rgba(63, 60, 60, 0.467)')
+    }else{
+        nima.textContent = 'dark'
+        nima.style.background = '#0e1538'
+        nima.style.color = '#fff'
+        indicator.className = 'indicator'
+        body.style.background = '#0c192c'
+        card.forEach(item =>
+            item.style.background = 'rgba(225,225,225,0.1)')
+    }
+    a = !a
+}
+
+let count = true
+const b_span = document.querySelector('.bubbles')
+function filter(e){
+    b_span.style.filter = `blur(${e/10}px)`
+}
+
+function check(){
+    if(count == true){
+        b_span.style.opacity = '0'
+    }
+    else{
+        b_span.style.opacity = '1'
+    }
+    count = !count
+}
+
+
+

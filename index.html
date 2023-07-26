@@ -44,7 +44,7 @@
                         </a>
                     </li>
                     <li class="list">
-                        <a href="#masaage">
+                        <a href="#select_input">
                             <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
                             <span class="text">Masaage</span>
                         </a>
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li class="list">
-                        <a href="#">
+                        <a href="#settings">
                             <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                             <span class="text">Settings</span>
                         </a>
@@ -121,7 +121,7 @@
             </div>
         </div>
         
-        <div class="select_input">
+        <div id="select_input" class="select_input">
             <h2 contenteditable="true" class="speak_h2">text</h2>
         </div>
         
@@ -138,6 +138,17 @@
                 <li style="--i:1;--clr:#ff0000;" data-text="YouTube"><a href="https://youtube.com/@behruzzokirov6001"><span><i class="fa-brands fa-youtube"></i></span>YouTube</a></li>
                 <li style="--i:2;--clr:#0a66c2;" data-text="Linkedin"><a href="#"><span><i class="fa-brands fa-linkedin"></i></span>Linkedin</a></li>
             </ul>
+        </div>
+
+        <div id="settings" class="settings">
+            <!-- <button onclick="bos()">bos</button> -->
+            <div class="container3">
+                <a onclick="bos()">
+                  <span>dark</span>
+                </a>
+              </div>
+            <input type="checkbox" onclick="check()" class="checkbox" checked>
+            <input value="0" type="range" oninput="filter(this.value)" class="range" role="switch">
         </div>
     </div>
 

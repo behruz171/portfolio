@@ -100,9 +100,10 @@ const body = document.querySelector("body")
 const card = document.querySelectorAll('.box .card')
 const indicator = document.querySelector('.indicator')
 const nima = document.querySelector('.container3 a span')
-
+const effect_h2 = document.querySelector('.effect_h2 h2')
 function bos(){
     if(a == true){
+        effect_h2.style.color = '#fff'
         nima.textContent = 'white'
         nima.style.color = '#0e1538'
         nima.style.background = '#fff'
@@ -111,6 +112,7 @@ function bos(){
         card.forEach(item =>
             item.style.background = 'rgba(63, 60, 60, 0.467)')
     }else{
+        effect_h2.style.color = '#0c192c'
         nima.textContent = 'dark'
         nima.style.background = '#0e1538'
         nima.style.color = '#fff'

@@ -13,6 +13,7 @@ body {
     /* align-items: center; */
     /* min-height: 100vh; */
     background: #0c192c;
+    cursor: url("./img/5197917.png"),auto;
 }
 
 .container {
@@ -151,7 +152,7 @@ body {
 .container1 {
     position: relative;
     width: 100%;
-    height: 430vh;
+    height: 470vh;
     overflow: hidden;
 }
 
@@ -700,7 +701,7 @@ body {
 
 .effect_h2{
     display: flex;
-    height: 50vh;
+    height: 30vh;
     justify-content: center;
     align-items: center;
 }
@@ -724,7 +725,82 @@ body {
     overflow: hidden;
     animation: animatie2 6s linear infinite;
 }
+@media only screen and (min-width:700px){
+    .b_ekran{
+        display: flex;
+        justify-content: space-around;   
+        align-items: center;
+        background: black;
+        box-shadow: 50px 10px 50px 20px black;
+        height: 80vh;
+    }
+    .b_h2{
+        font-size: 32px;
+        color: #00ccff;
+        transition: .5s all;
+        padding: 0;
+        margin: 0;
 
+    }
+    .b_title{
+        position: relative;
+        animation: b_ekran1 10s infinite;
+    }
+    .b_h2:hover{
+        color:#00ccff ;
+        text-shadow: -6px -6px rgba(255, 0, 0, 0.484);
+        font-size: 40px;
+    }
+
+    .b_rasm img{
+        width: 500px;
+        animation: bosh_ekran 10s infinite;
+    }
+    @keyframes b_ekran1 {
+        0%{
+            position: relative;
+            right: 0;
+            opacity: 1;
+        }
+        20%{
+            position: relative;
+            right: -20vw;
+            opacity: 0;
+        }
+        30%{
+            position: relative;
+            right: 0;
+            opacity: 0;
+        }
+        100%{
+            position: relative;
+            right: 0;
+            opacity: 1;
+        }
+    }
+    @keyframes bosh_ekran {
+        0%{
+            position: relative;
+            transform: rotateY(0);
+            right: 0;
+        }
+        20%{
+            position: relative;
+            transform: rotateY(360deg);
+            right: 23vw;
+        }
+        30%{
+            position: relative;
+            transform: rotateY(0);
+            right: 0;
+        }
+        100%{
+            position: relative;
+            transform: rotateY(0);
+            right: 0;
+        }
+    }
+}
 @media only screen and (max-width:700px) {
     .wrapper span {
         transform: rotateY(calc(75deg * var(--v))) translateZ(200px);
@@ -737,6 +813,7 @@ body {
     .navbar {
         position: relative;
         top: 86vh;
+        margin: 0;
     }
 
     .navigation {
@@ -746,7 +823,7 @@ body {
     }
 
     .container1 {
-        height: 440vh;
+        height: 480vh;
     }
 
     .nima2 img {
@@ -763,6 +840,78 @@ body {
     }
     .effect_h2 h2{
         font-size: 7vw;
+    }
+
+    .b_ekran{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background: black;
+        box-shadow: 50px 10px 50px 20px black;
+        height: 100vh;
+    }
+    .b_title h2{
+        font-size: 32px;
+        color: blue;
+    }
+    
+    .b_title{
+        position: relative;
+        animation: b_ekran1 10s infinite;
+    }
+    .b_rasm img{
+        width: 300px;
+        margin-top: 50px;
+        animation: bosh_ekran 10s infinite;
+    }
+    @keyframes bosh_ekran {
+        0%{
+            position: relative;
+            width: 300px;
+            transform: rotateY(0);
+            bottom: 0;
+        }
+        20%{
+            position: relative;
+            width: 380px;
+            transform: rotateY(360deg);
+            bottom: 30vw;
+        }
+        30%{
+            position: relative;
+            width: 300px;
+            transform: rotateY(0);
+            bottom: 0;
+        }
+        100%{
+            position: relative;
+            width: 300px;
+            transform: rotateY(0);
+            bottom: 0;
+        }
+    }
+    @keyframes b_ekran1 {
+        0%{
+            position: relative;
+            bottom: 0;
+            opacity: 1;
+        }
+        20%{
+            position: relative;
+            bottom: -30vw;
+            opacity: 0;
+        }
+        30%{
+            position: relative;
+            bottom: 0;
+            opacity: 0;
+        }
+        100%{
+            position: relative;
+            bottom: 0;
+            opacity: 1;
+        }
     }
 }
 

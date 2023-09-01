@@ -130,14 +130,25 @@ function filter(e){
     b_span.style.filter = `blur(${e/10}px)`
 }
 
-function check(){
-    if(count == true){
+// function check(){
+//     if(count == true){
+//         b_span.style.opacity = '0'
+//     }
+//     else{
+//         b_span.style.opacity = '1'
+//     }
+//     count = !count
+// }
+let box3 = document.querySelector('.box3')
+function fonlar(e){
+    if(e =='fon2'){
         b_span.style.opacity = '0'
+        box3.style.opacity = '1'
     }
-    else{
+    else if(e == 'fon1'){
+        box3.style.opacity = '0'
         b_span.style.opacity = '1'
     }
-    count = !count
 }
 
 

@@ -66,6 +66,18 @@
             </div>
         </div>
         <div class="bubbles"></div>
+        <div class="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         <div class="b_ekran">
             <div class="b_title">
@@ -160,7 +172,12 @@
                   <span>dark</span>
                 </a>
               </div>
-            <input type="checkbox" onclick="check()" class="checkbox" checked>
+            <!-- <input type="checkbox" onclick="check()" class="checkbox" checked> -->
+            <select onchange="fonlar(this.value)">
+                <option selected disabled>fonts</option>
+                <option value="fon1">Fon1</option>
+                <option value="fon2">Fon2</option>
+            </select>
             <input value="0" type="range" oninput="filter(this.value)" class="range" role="switch">
         </div>
     </div>

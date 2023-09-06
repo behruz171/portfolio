@@ -126,8 +126,12 @@ function bos(){
 
 let count = true
 const b_span = document.querySelector('.bubbles')
+const b_div = document.querySelectorAll(".box3 div")
 function filter(e){
     b_span.style.filter = `blur(${e/10}px)`
+    b_div.forEach(item=>{
+        item.style.filter = `blur(${e/10}px)`
+    })
 }
 
 // function check(){
